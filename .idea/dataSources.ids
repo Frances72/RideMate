@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - @localhost" uuid="323f7b1c-c2c3-461c-aa7c-371d985eba4b">
+    <database-info product="MySQL" version="5.6.24-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="pomtest"/>
+    <table name="chip" schema="" catalog="pomtest" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="cycler_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_nberenxop3ciyjoxt72mp42i2" columns="cycler_id" ref-table="cycler" ref-schema="" ref-catalog="pomtest" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_5nbbrkxxq0yo56h4iwp1fx4pd" table="cycler" schema="" catalog="pomtest" columns="cycler_id"/>
+      <index name="FK_nberenxop3ciyjoxt72mp42i2" unique="false" columns="cycler_id"/>
+    </table>
+    <table name="cycler" schema="" catalog="pomtest" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="age" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="first" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="last" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="cycler_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_5nbbrkxxq0yo56h4iwp1fx4pd" columns="cycler_id" ref-table="chip" ref-schema="" ref-catalog="pomtest" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_nberenxop3ciyjoxt72mp42i2" table="chip" schema="" catalog="pomtest" columns="cycler_id"/>
+      <index name="FK_5nbbrkxxq0yo56h4iwp1fx4pd" unique="false" columns="cycler_id"/>
+    </table>
+  </data-source>
+</component>
