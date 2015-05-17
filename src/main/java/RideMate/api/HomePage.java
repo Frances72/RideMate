@@ -16,7 +16,7 @@ public class HomePage {
 
     @RequestMapping(value = "home",method = RequestMethod.GET)
     public String Index(){
-        return "This is a Home Page";
+        return "This is a Excellent Home Page";
     }
 
 
