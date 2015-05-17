@@ -37,4 +37,4 @@ Thereafter, the ride statistics can be calculated and displayed.
 
 
 
-![](http://2.bp.blogspot.com/-TmmrmJG7jjk/VUZ5gVNQuBI/AAAAAAAAAMU/2GYrlmGBHqQ/s1600/RideMate_UML_Diagram.jpg)modifying readme file
+![](http://4.bp.blogspot.com/-NubHwVoAUYU/VVipgThflmI/AAAAAAAAAMo/WjmdvrzgPig/s1600/RideMate_UML_Diagram2.jpg)
