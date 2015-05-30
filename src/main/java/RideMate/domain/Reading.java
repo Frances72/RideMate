@@ -25,7 +25,7 @@ public class Reading implements Serializable{
     @JoinColumn(name="reader_id")
     private Reader reader;
 
-    private Date readTime = new Date();
+    private Date readTime;
 
     public Reading(){
 

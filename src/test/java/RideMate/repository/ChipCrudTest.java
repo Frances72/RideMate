@@ -29,7 +29,7 @@ public class ChipCrudTest extends AbstractTestNGSpringContextTests {
     @Test
     public void create() throws Exception {
 
-        Cycler cycler = CyclerFactory.createCycler("jack", "bob", 23);
+       Cycler cycler = CyclerFactory.createCycler("mary", "smit", 33);
 
         Chip chip = ChipFactory.createChip(cycler);
         repository.save(chip);
@@ -37,7 +37,7 @@ public class ChipCrudTest extends AbstractTestNGSpringContextTests {
         Assert.assertNotNull(chip);
 
     }
-
+ /*
        @Test(dependsOnMethods = "create")
         public void read ()throws Exception {
             Chip chip = repository.findOne(id);
@@ -49,7 +49,7 @@ public class ChipCrudTest extends AbstractTestNGSpringContextTests {
        /* @Test(dependsOnMethods = "read")
         public void update ()throws Exception {
 
-        }*/
+        }
 
         @Test(dependsOnMethods = "read")
         public void delete ()throws Exception {
@@ -59,5 +59,6 @@ public class ChipCrudTest extends AbstractTestNGSpringContextTests {
             Assert.assertNull(deletedChip);
             repository.save(chip);
 
-        }
+        }*/
     }
+

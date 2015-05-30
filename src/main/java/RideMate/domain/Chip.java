@@ -20,26 +20,20 @@ public class Chip implements Serializable {
     }
 
     public Chip(Builder builder){
-       // id = builder.id;
-        cycler = builder.cycler;
+       cycler = builder.cycler;
     }
     public Cycler getCyclerID(){return cycler;}
 
     public Long getChipID(){return id;}
 
     public static class Builder{
-       // private Long id;
-        private Cycler cycler;
+           private Cycler cycler;
 
-        /*public Builder(Cycler value){
+            public Builder (Cycler value){
             this.cycler = value;
-        }*/
-        public Builder (Cycler value){
-            this.cycler = value;
-        }
+            }
 
         public Builder copy(Chip value){
-            //this.id = value.id;
             this.cycler = value.cycler;
             return this;
         }

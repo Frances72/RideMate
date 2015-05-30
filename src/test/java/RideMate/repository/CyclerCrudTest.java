@@ -1,13 +1,9 @@
 package RideMate.repository;
 
 import RideMate.App;
-import RideMate.domain.Cycler;
-import org.junit.Assert;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.test.context.web.WebAppConfiguration;
-import org.testng.annotations.Test;
 
 /**
  * Created by User on 2015/05/11.
@@ -16,7 +12,7 @@ import org.testng.annotations.Test;
 @SpringApplicationConfiguration(classes= App.class)
 @WebAppConfiguration
 public class CyclerCrudTest extends AbstractTestNGSpringContextTests{
-
+/*
     private Long id;
     private String first;
     private String last;
@@ -62,7 +58,7 @@ public class CyclerCrudTest extends AbstractTestNGSpringContextTests{
             Assert.assertNull(deletedCycler);
 
 
-        }
+        }*/
 
 
     }

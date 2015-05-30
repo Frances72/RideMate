@@ -1,13 +1,9 @@
 package RideMate.repository;
 
 import RideMate.App;
-import RideMate.domain.Reader;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.test.context.web.WebAppConfiguration;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 /**
  * Created by User on 2015/05/17.
@@ -16,7 +12,7 @@ import org.testng.annotations.Test;
 @SpringApplicationConfiguration(classes= App.class)
 @WebAppConfiguration
 public class ReaderCrudTest extends AbstractTestNGSpringContextTests {
-    private Long id;
+/*    private Long id;
     private Double distance;
 
     @Autowired
@@ -65,7 +61,7 @@ public class ReaderCrudTest extends AbstractTestNGSpringContextTests {
 
 
     }
-
+*/
 
 }
 

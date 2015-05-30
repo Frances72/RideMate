@@ -1,20 +1,20 @@
 package RideMate.domain;
 
-import RideMate.conf.factory.ChipFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
- * Created by User on 2015/05/17.
+ * Created by User on 2015/05/26.
  */
-public class ChipDomTest {
+public class CyclerDomTest  {
     @Test
-   public void testCreate() throws Exception{
+    public void testCreate() throws Exception{
 
         Cycler cycler = new Cycler.Builder("John").last("Edwards").age(39).build();
-        Chip chip = ChipFactory.createChip(cycler);
 
-       Assert.assertNotNull(chip);
+        Assert.assertEquals("John", cycler.getFirst());
+        Assert.assertEquals("Edwards",cycler.getLast());
+        Assert.assertEquals(39,cycler.getAge());
 
     }
 
@@ -26,10 +26,6 @@ public class ChipDomTest {
         Assert.assertEquals("Sasha",newcycler.getFirst());
         Assert.assertEquals("Grey",newcycler.getLast());
         Assert.assertEquals(24, newcycler.getAge());
-
-        Chip chip = ChipFactory.createChip(newcycler);
-
-        Assert.assertNotNull(chip);
 
     }
 }
