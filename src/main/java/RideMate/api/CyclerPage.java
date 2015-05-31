@@ -32,7 +32,7 @@ public class CyclerPage {
                                 .last(cycler.getLast())
                                 .age(cycler.getAge())
                                 .build();
-            Link cyclist = new Link("http://localhost:8183/chip/" + res.getResId().toString()).withRel("cycler1");
+            Link cyclist = new Link("http://localhost:8183/cycler/" + res.getResId().toString()).withRel("cycler1");
             res.add(cyclist);
             hateoas.add(res);
         }
