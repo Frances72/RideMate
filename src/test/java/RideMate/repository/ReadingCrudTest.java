@@ -1,9 +1,19 @@
 package RideMate.repository;
 
 import RideMate.App;
+import RideMate.conf.factory.ChipFactory;
+import RideMate.domain.Chip;
+import RideMate.domain.Cycler;
+import RideMate.domain.Reader;
+import RideMate.domain.Reading;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.test.context.web.WebAppConfiguration;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.util.Date;
 
 /**
  * Created by User on 2015/05/17.
@@ -12,7 +22,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @SpringApplicationConfiguration(classes= App.class)
 @WebAppConfiguration
 public class ReadingCrudTest extends AbstractTestNGSpringContextTests {
- /*   @Autowired
+    @Autowired
     private ReadingRepository repository;
 
     private Long id;
@@ -20,17 +30,14 @@ public class ReadingCrudTest extends AbstractTestNGSpringContextTests {
     private Cycler cycler;
     private Reader reader;
     private Date readTime;
-/*
-* How do you code the tests for an Entity that is composed of other entities?
-* I am unable to create concrete test variables when they are composed at runtime only.
-*
-*
-* */
-  /*   @Test
+
+
+
+    @Test
    public void create() throws Exception{
 
         Reader reader = new Reader.Builder(9.99).build();
-        Cycler cycler = new Cycler.Builder("JAJA").last("BINX").age(99).build();
+        Cycler cycler = new Cycler.Builder("ReadingCrud").last("Test").age(99).build();
         Chip chip = ChipFactory.createChip(cycler);
 
 
@@ -39,7 +46,7 @@ public class ReadingCrudTest extends AbstractTestNGSpringContextTests {
         id = reading.getReadingId();
         Assert.assertNotNull(id);
         System.out.println("This is inside the create for Reading test");
-    }/*
+    }
    @Test(dependsOnMethods = "create")
     public void read ()throws Exception {
         Reading reading = repository.findOne(id);
@@ -49,11 +56,14 @@ public class ReadingCrudTest extends AbstractTestNGSpringContextTests {
 
     @Test(dependsOnMethods = "read")
     public void update() throws Exception {
-      /* Reading reading = repository.findOne(id);
-        Reading reading = new Reader.Builder(chip). cycler(cycler).reader(reader).readTime(readTime).build();
+        Reader reader = new Reader.Builder(3.35).build();
+        Cycler cycler = new Cycler.Builder("Reading").last("Update").age(21).build();
+        Chip chip = ChipFactory.createChip(cycler);
+        Reading reading = repository.findOne(id);
+        Reading readings = new Reading.Builder(chip).cycler(chip.getCyclerID()).reader(reader).readTime(new Date()).build();
         repository.save(reading);
         Reading updatedReading = repository.findOne(id);
-        Assert.assertEquals();
+        Assert.assertNotNull(updatedReading);
         System.out.println("This is inside the update for Reading test");
 
 
@@ -63,5 +73,5 @@ public class ReadingCrudTest extends AbstractTestNGSpringContextTests {
     public void delete() throws Exception {
 
         System.out.println("This is inside the delete for Reading test");
-    }*/
+    }
 }
