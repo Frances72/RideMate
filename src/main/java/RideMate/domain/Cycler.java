@@ -24,6 +24,7 @@ public class Cycler implements Serializable{
         first = builder.first;
         last = builder.last;
         age = builder.age;
+        id  = builder.id;
     }
 
     public Long getCyclerID(){return id;}
@@ -38,6 +39,7 @@ public class Cycler implements Serializable{
         private String first;
         private String last;
         private int age;
+        private Long id;
 
 
         public Builder(String first) {
@@ -46,6 +48,11 @@ public class Cycler implements Serializable{
 
         public Builder last(String value) {
             this.last = value;
+            return this;
+        }
+
+        public Builder id(Long value) {
+            this.id = value;
             return this;
         }
 

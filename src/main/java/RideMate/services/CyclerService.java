@@ -9,4 +9,10 @@ import java.util.List;
  */
 public interface CyclerService {
     List<Cycler> getAllCyclers();
+    void createCycler(Cycler Entity);
+    void  updateCycler(Cycler Entity);
+    Cycler findCycler(Long Id);
+    void deleteCycler(Long Id);
+    void deleteCycler(Cycler Entity);
+
 }

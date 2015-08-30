@@ -26,4 +26,25 @@ public class CyclerServiceImpl implements CyclerService {
         }
         return allCyclers;
     }
+
+    public void createCycler(Cycler Entity){
+        repository.save(Entity);
+
+    }
+
+    public void  updateCycler(Cycler Entity){
+        repository.save(Entity);
+    }
+
+    public Cycler findCycler(Long Id){
+        return repository.findOne(Id);
+    }
+
+    public void deleteCycler(Long Id){
+        repository.delete(Id);
+    }
+
+    public void deleteCycler(Cycler Entity){
+        repository.delete(Entity);
+    }
 }

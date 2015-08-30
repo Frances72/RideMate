@@ -1,11 +1,16 @@
 package RideMate.repository;
 
 import RideMate.App;
+import RideMate.conf.factory.ChipFactory;
+import RideMate.conf.factory.CyclerFactory;
+import RideMate.domain.Chip;
 import RideMate.domain.Cycler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.test.context.web.WebAppConfiguration;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 /**
  * Created by User on 2015/05/10.
@@ -20,7 +25,7 @@ public class ChipCrudTest extends AbstractTestNGSpringContextTests {
 
     @Autowired
     private ChipRepository repository;
-/*
+
     @Test
     public void create() throws Exception {
 
@@ -41,7 +46,7 @@ public class ChipCrudTest extends AbstractTestNGSpringContextTests {
 
         }
 
-       /* @Test(dependsOnMethods = "read")
+        @Test(dependsOnMethods = "read")
         public void update ()throws Exception {
 
         }
@@ -55,6 +60,6 @@ public class ChipCrudTest extends AbstractTestNGSpringContextTests {
             repository.save(chip);
 
         }
-    }*/
-}
+    }
+//}
 

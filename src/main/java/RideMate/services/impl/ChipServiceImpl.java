@@ -16,6 +16,8 @@ import java.util.List;
 public class ChipServiceImpl implements ChipService {
     @Autowired
     ChipRepository repository;
+
+
     public List<Chip> getAllChips() {
         List<Chip> allChips = new ArrayList<Chip>();
 
@@ -25,4 +27,15 @@ public class ChipServiceImpl implements ChipService {
         }
         return allChips;
     }
+
+
+
+    public void createChip(Chip Entity){}
+    public void  updateChip(Chip Entity){}
+    public Chip findChip(Long Id){
+        Chip  chip = repository.findOne(Id);
+        return chip;
+    }
+    public void deleteChip(Long Id){}
+    public void deleteChip(Chip Entity){}
 }

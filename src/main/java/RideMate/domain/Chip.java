@@ -28,13 +28,20 @@ public class Chip implements Serializable {
 
     public static class Builder{
            private Cycler cycler;
+           private Long id;
 
             public Builder (Cycler value){
             this.cycler = value;
             }
 
+        public Builder id(Long value) {
+            this.id = value;
+            return this;
+        }
+
         public Builder copy(Chip value){
             this.cycler = value.cycler;
+            this.id = value.id;
             return this;
         }
     public Chip build() {
