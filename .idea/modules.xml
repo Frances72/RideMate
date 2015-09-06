@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ac.za.ridemate.iml" filepath="$PROJECT_DIR$/ac.za.ridemate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RideMate.iml" filepath="$PROJECT_DIR$/RideMate.iml" />
     </modules>
   </component>
 </project>
